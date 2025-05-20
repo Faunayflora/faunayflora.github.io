@@ -1,0 +1,323 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header, nav, main, footer{
+    width: 100%;
+    padding: 30px;
+    background-color: #FFE4CF;
+    color: #2F5D50;
+}
+header{
+    text-align: center;
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    
+}
+.encabezado {
+  background-image: url('../Img/Fondo1_Mesa%20de%20trabajo%201.png'); 
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 300px;                               
+  display: flex;              
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  align-items: flex-end;
+}
+
+.btn-regresar{
+  position: fixed;          
+  top: 20px;                
+  left: 20px;              
+  background-color: #EAD779;
+  color: #2F5D50;
+  border: 10px solid #2F5D50;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;           
+  transition: background-color 0.3s ease; 
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+    }
+    
+nav{
+    background-color: #C8CA4F;
+    height: auto;
+    
+}
+main{
+    height: auto;
+    background-color: #3D3D3D;
+    color: #FFFAEC;
+    padding: 10px;
+    background-image: url('../Img/9637512.jpg');
+    background-size: cover;        /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que la imagen se repita */
+    min-height: 100vh;             /* Hace que el fondo cubra al menos toda la altura de la ventana */
+    padding: 2rem;
+                 
+}
+nav ul{
+    text-align: center;
+    text-decoration: none;
+   
+}
+nav ul li{
+    width: auto;
+    min-width: 100px;
+    height: 60px;
+    background-color: #EAD779;
+    color: #2F5D50;
+    border-radius: 35px;
+    border: 10px solid #2F5D50;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    list-style-type: none;
+    padding: 10px;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+nav ul li:hover{
+    background-color: #578E7E;
+    text-decoration: none;
+}
+/* Estilos del submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #EAD779;
+    border: 5px solid #2F5D50;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 0;
+    z-index: 999;
+    text-align: left;
+    width: 200px;
+}
+
+.submenu li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #2F5D50;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    color: #2F5D50;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+}
+
+.submenu li:hover {
+    background-color: #578E7E;
+}
+
+/* Mostrar el submenú al pasar el cursor */
+.submenu-parent {
+    position: relative;
+}
+
+.submenu-parent:hover .submenu {
+    display: block;
+}
+
+section{
+    width: 70%;
+    height: auto;
+    background-color: rgba(233, 232, 167, 0.69);
+    border-radius: 35px;
+    border: 2px solid #2F5D50;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    color: black;
+}
+.principal{
+    margin-top: 20px;
+    margin-bottom: auto;
+    font-family: "Roboto", sans-serif;
+    color: #2F5D50;
+    font-weight: 600;
+    
+}
+h1{
+    font-family: "Open Sans", sans-serif;
+}
+h2,h3{
+    color: #2F5D50;
+    font-family: "Roboto", sans-serif;
+}
+.btn-menu-style {
+    width: auto;
+    min-width: 100px;
+    height: auto;
+    background-color: #EAD779;
+    color: #2F5D50;
+    border-radius: 35px;
+    border: 10px solid #2F5D50;
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+div{
+    margin-bottom: 50px;
+    margin-top: auto;
+}
+
+.gallery-section {
+      margin-bottom: 50px;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: transparent;
+      width: 250px;
+      height: 350px;
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #fff;
+    }
+    .card-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-front .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+    .card-front .card-content h3 {
+      margin: 0;
+      font-size: 18px;
+      font-family: "Roboto", sans-serif;
+      color: #2f4f4f;
+    }
+    .card-front .card-content p {
+      margin: 5px 0;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+    }
+    .card-back {
+      background-color: #007f3f;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+    }
+    .card-back h3 {
+      margin-bottom: 10px;
+    }
+    .card-back p {
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+    }
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  height: 350px; 
+  overflow: hidden;
+  margin: auto;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+.carousel {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: slide 12s linear infinite;
+}
+
+.carousel-track img {
+  width: 100%;
+  max-width: 600px;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+footer{
+	background-color: #C8C951;
+	text-align: center;
+	padding: 20px;
+	color: #2F5D50;
+	font-family: "Poppins", sans-serif;
+    font-weight: 300;
+	font-style: normal;
+	height: 250px;
+}

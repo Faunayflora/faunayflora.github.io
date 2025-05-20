@@ -1,0 +1,198 @@
+<html>
+    <head>
+    <title>Fauna endemica</title>
+    <link rel="stylesheet" href="../CSS/Estilos_2.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+ 
+    <style type="text/css">
+        main{
+            text-align: center;
+            padding-top: 50px;
+        }
+    
+    </style>
+    </head>
+    <body>
+        <header class="encabezado">
+          <button class="btn-regresar" onclick="history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#2F5D50" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6"/>
+  </svg>
+</button>
+<h2>MAPA DE ECOSISTEMAS</h2>
+        </header>
+         <nav> 
+    <ul>
+        <li><a href="../index.html"> INICIO</a></li>
+        <li class="submenu-parent">
+            <a href="#">BIODIVERSIDAD</a>
+            <ul class="submenu">
+                <li><a href="../HTML/Flora.html">Flora</a></li>
+                <li><a href="../HTML/FAUNA%20DE%20PUEBLA.html">Fauna</a></li>
+                <li><a href="../HTML/Ecosistema.html">Ecosistemas</a></li>
+                <li><a href="../HTML/especies-en-peligro.html">Especies en peligro</a></li>
+            </ul>
+        </li>
+        <li><a href="../HTML/QUIZZ.html">JUEGA Y APRENDE</a></li>
+    </ul> 
+</nav>
+         <main> 
+         <div id="sidebar">
+      <h2>Fauna por Ecosistema</h2>
+      <div id="regionList"></div>
+    </div>
+    <div id="map"></div>
+  </main>
+
+
+        <footer>
+          
+           <h5>© 2025 Flora y Fauna de Puebla</h5> 
+           <h5>Todos los derechos reservados.</h5>
+            <h6>Explora, aprende y protege la biodiversidad de nuestro estado. | Sitio creado con fines educativos.</h6>
+
+        </footer>
+        
+ <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([19.0414, -98.2063], 7);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    const ecosistemas = {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Bosque Templado",
+            "flora_fauna": "Encinos, pinos, tlacuache, gato montés, halcón.",
+            "clima_altitud": "Clima templado, 1800-3000 m.s.n.m., Sierra Norte y La Malinche.",
+            "problemas": "Tala ilegal, incendios, expansión urbana.",
+            "video": "https://www.youtube.com/watch?v=cFcglA4IIX8",
+            "imagen": "https://th.bing.com/th/id/R.3c0039d935151429813fddb8c8b4da22?rik=GlJse7UBxfTgZw&pid=ImgRaw&r=0"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-98.5, 19.0], [-98.4, 19.0], [-98.4, 19.1], [-98.5, 19.1], [-98.5, 19.0]]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Selva Baja Caducifolia",
+            "flora_fauna": "Copal, cazahuate, armadillo, iguana, serpiente.",
+            "clima_altitud": "Clima cálido-seco, 600-1200 m.s.n.m., región Mixteca.",
+            "problemas": "Deforestación agrícola, erosión del suelo.",
+            "video": "https://www.youtube.com/watch?v=ivrL5ZqoXN8",
+            "imagen": "https://th.bing.com/th/id/OIP.b3mwq35U9EwhU97H8u9dbAHaEK?rs=1&pid=ImgDetMain"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-97.9, 18.2], [-97.8, 18.2], [-97.8, 18.3], [-97.9, 18.3], [-97.9, 18.2]]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Bosque de Niebla",
+            "flora_fauna": "Helechos, orquídeas, quetzal, tucán, jaguarundi.",
+            "clima_altitud": "Clima húmedo templado, 1500-2500 m.s.n.m., Sierra Norte.",
+            "problemas": "Cambio climático, fragmentación del hábitat.",
+            "video": "https://www.youtube.com/watch?v=1rI_7EV4c8k",
+            "imagen": "https://www.eluniversalpuebla.com.mx/resizer/v2/SMASIEUWKNFSVB24OXFZPTPPUA.jpg?auth=c9cee956722ffb7f027b5095cf0941da4c311afbea17270d1d65df6f4984acd1&smart=true&width=1100&height=666"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-97.5, 20.0], [-97.4, 20.0], [-97.4, 20.1], [-97.5, 20.1], [-97.5, 20.0]]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Matorral Xerófilo",
+            "flora_fauna": "Biznagas, mezquite, coyote, víbora de cascabel.",
+            "clima_altitud": "Clima seco, 1800-2200 m.s.n.m., Valle de Tehuacán-Cuicatlán.",
+            "problemas": "Sobrepastoreo, extracción ilegal de especies.",
+            "video": "https://www.youtube.com/watch?v=sfdosMzSHxU",
+            "imagen": "https://static.wixstatic.com/media/811b69_89bb3d97ffff45f3b7ec5d9d197ae9e2~mv2.jpeg/v1/fill/w_980,h_654,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/811b69_89bb3d97ffff45f3b7ec5d9d197ae9e2~mv2.jpeg"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-97.3, 18.4], [-97.2, 18.4], [-97.2, 18.5], [-97.3, 18.5], [-97.3, 18.4]]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Pastizal Natural",
+            "flora_fauna": "Zacates, gramíneas, liebre, zorro, águila real.",
+            "clima_altitud": "Clima templado-seco, 2000-2500 m.s.n.m., zonas de altiplano.",
+            "problemas": "Cambio de uso de suelo, urbanización.",
+            "video": "ttps://www.youtube.com/watch?v=qPm_1D2ieaM",
+            "imagen": "https://pro2-bar-s3-cdn-cf3.myportfolio.com/716b6ddbfbaa54b2711a1433d1e3b80e/4874948ab36f5fbdad144b9c_rw_600.jpg?h=bfa93b9ad1675df291e9d17e6567e8b3"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-98.1, 18.8], [-98.0, 18.8], [-98.0, 18.9], [-98.1, 18.9], [-98.1, 18.8]]]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "nombre": "Zona Lacustre y Humedales",
+            "flora_fauna": "Tules, lirios acuáticos, ajolote, garza, rana.",
+            "clima_altitud": "Clima templado-húmedo, altitudes variables, región del Valle de Puebla y río Atoyac.",
+            "problemas": "Contaminación hídrica, invasión urbana.",
+            "video": "https://www.youtube.com/watch?v=U6tBY7_t6kE",
+            "imagen": "https://jefaturadegobierno.cdmx.gob.mx/storage/app/uploads/public/629/fe1/1a7/629fe11a7d6d9668823300.jpeg"
+          },
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-98.3, 18.95], [-98.2, 18.95], [-98.2, 19.05], [-98.3, 19.05], [-98.3, 18.95]]]
+          }
+        }
+      ]
+    };
+    const layerGroup = L.geoJSON(ecosistemas, {
+      onEachFeature: function (feature, layer) {
+        const p = feature.properties;
+        const popup = `
+          <div class="popup-card">
+            <img src="${p.imagen}" alt="Imagen de ${p.nombre}" />
+            <div class="popup-card-content">
+              <h2>${p.nombre}</h2>
+              <p><strong>Flora y fauna:</strong> ${p.flora_fauna}</p>
+              <p><strong>Clima, altitud y ubicación:</strong> ${p.clima_altitud}</p>
+              <p><strong>Problemas ambientales:</strong> ${p.problemas}</p>
+              <a href="${p.video}" target="_blank">Ver video</a>
+            </div>
+          </div>`;
+        layer.bindPopup(popup);
+        layer.featureCenter = layer.getBounds().getCenter();
+        p.layerRef = layer;
+      },
+      style: {
+        color: "#2e7d32",
+        weight: 2,
+        fillColor: "#a5d6a7",
+        fillOpacity: 0.6
+      }
+    }).addTo(map);
+    const regionList = document.getElementById("regionList");
+    ecosistemas.features.forEach((feature, i) => {
+      const item = document.createElement("div");
+      item.className = "region-item";
+      item.textContent = feature.properties.nombre;
+      item.addEventListener("click", () => {
+        const center = feature.properties.layerRef.featureCenter;
+        map.setView(center, 10);
+        feature.properties.layerRef.openPopup();
+      });
+      regionList.appendChild(item);
+    });
+  </script>
+    </body>
+</html>
+

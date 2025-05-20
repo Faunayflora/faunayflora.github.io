@@ -1,0 +1,500 @@
+<html>
+    <head>
+    <title>Fauna endemica</title>
+    <link rel="stylesheet" href="../CSS/Estilos_1.css" type="text/css">
+    <style type="text/css">
+        main{
+            text-align: center;
+            padding-top: 50px;
+        }
+      #card-red{
+      background-color: #A6192E;
+      color: white;
+      }
+      #card-yellow{
+      background-color: #FFB400;
+      color: white
+      }
+      h1{
+        color: #2F5D50;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+      a:{
+        text-decoration: none;
+      }
+       .container {
+                position: relative;
+                width: 300px;
+                display: inline-block;
+                padding: 10px;
+          
+            }
+
+/* Bottom right text */
+            .text-block {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background-color: #A6192E;
+                color: white;
+                padding-left: 20px;
+                padding-right: 20px;
+                }
+            .img-normalizada{
+                width: 350px;
+                height: 250px;
+                object-fit: cover;
+                  }
+    </style>
+    </head>
+    <body>
+        <header class="encabezado">
+          <button class="btn-regresar" onclick="history.back()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#2F5D50" viewBox="0 0 24 24">
+    <path d="M15 18l-6-6 6-6"/>
+  </svg>
+</button>
+            <h2>ESPECIES EN PELIGRO</h2>
+        </header>
+        <nav> 
+    <ul>
+        <li><a href="../index.html"> INICIO</a></li>
+        <li class="submenu-parent">
+            <a href="#">BIODIVERSIDAD</a>
+            <ul class="submenu">
+                <li><a href="../HTML/Flora.html">Flora</a></li>
+                <li><a href="../HTML/FAUNA%20DE%20PUEBLA.html">Fauna</a></li>
+                <li><a href="../HTML/Ecosistema.html">Ecosistemas</a></li>
+                <li><a href="../HTML/especies-en-peligro.html">Especies en peligro</a></li>
+            </ul>
+        </li>
+        <li><a href="../HTML/QUIZZ.html">JUEGA Y APRENDE</a></li>
+    </ul>  
+</nav>
+         <main> 
+           <section>
+             <p class="principal">¿Sabías que en México viven animales únicos que no se encuentran en ninguna otra parte del mundo? Muchos de ellos están en peligro de desaparecer para siempre. En esta sección podrás conocer algunas de estas especies, descubrir por qué están en riesgo y qué podemos hacer para ayudarlas.</p>
+              <p class="principal"><b>¡Tú también puedes ser parte del cambio y proteger la increíble vida que hay en nuestro país!</b></p>
+             <ul class="principal">
+               <li><b><a href="#animales">Animales</a></b></li>
+               <li><b><a href="#plantas">Plantas</a></b></li>
+               <li><b><a href="#causas">Causas de peligro</a></b></li>
+               <li><b><a href="#medidas">Medidas de Prevencion</a></b></li>
+             </ul>
+           </section>
+           <h1 id="animales">ANIMALES</h1>
+           <section class="gallery-section">
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://palmitospark.es/wp-content/uploads/2023/04/reptile-g431a1a603_1280-1024x682.jpg" alt="Iguana verde">
+            <div class="card-content">
+              <h3>Iguana Verde</h3>
+              <p><strong>Iguan Iguana</strong></p>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>Sujeta a protección especial</h3>
+            <p>Se destaca la actividad humana como principal amenaza para la especie; en algunas poblaciones se da una reducción de sus individuos y de su rango de distribución por la sobre explotación, extracción de la especie y sus huevos para consumo humano y destrucción de grandes áreas boscosas.</p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://static.inaturalist.org/photos/168362446/large.jpg" alt="Aguila real">
+            <div class="card-content">
+              <h3>Águila real</h3>
+              <p><strong>Aquila chrysaetos</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-yellow">
+            <h3>Amenazada</h3>
+            <p>Esta emblemática especie se encuentra amenazada por la caza furtiva, el envenenamiento accidental, la electrocución en cables de alta tensión, el saqueo ilegal de sus nidos y, sobre todo, la pérdida de su hábitat. </p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://sedema.cdmx.gob.mx/storage/app/uploads/public/66d/50b/479/66d50b479b718299374067.jpg" alt="Lobo mexicano">
+            <div class="card-content">
+              <h3>Lobo Mexicano</h3>
+              <p><strong>Canis lupus baileyi</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>Aunque en 2019 se cambió su estatus de "Probablemente extinto en el medio silvestre" a "En Peligro de Extinción", aún se necesita mucho trabajo para asegurar su futuro. La caza furtiva y la pérdida de hábitat son las principales amenazas. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner"> 
+          <div class="card-front">
+            <img src="https://c.files.bbci.co.uk/2A3F/production/_95151801_mediaitem95151800.jpg" alt="Ballena azul">
+            <div class="card-content">
+              <h3>Ballena Azul</h3>
+              <p><strong>Balaenoptera musculus</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>La ballena azul está catalogada como especie en peligro de extinción en toda su área de distribución según la ESA y, por lo tanto, se considera agotada en toda su área de distribución según la MMPA. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://services.meteored.com/img/article/el-axolote-esta-en-peligro-de-extincion-que-pasa-si-desaparece-1719893594747_1280.jpg" alt="Ajolote">
+            <div class="card-content">
+              <h3>Ajolote</h3>
+              <p><strong>Ambystoma mexicanum</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro Critico</h3>
+            <p>Sus poblaciones en libertad son muy pequeñas, y la principal causa de su reducción en años recientes es la grave degradación que ha sufrido su hábitat natural, principalmente a través de la contaminación, pero también por la introducción de especies de peces que compiten o depredan al ajolote. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/10137907/large.jpg" alt="Ajolote">
+            <div class="card-content">
+              <h3>Colibrí pico corto</h3>
+              <p><strong>Abeillia abeillei</strong></p>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>Sujeta a protección especial</h3>
+            <p>Es una especie con vulnerabilidad alta. Está incluida en la NOM-059-SEMARNAT-2010 en la categoría Sujeta a protección especial (Pr), en la Lista Roja de la UICN en la categoría Preocupación menor </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://i0.wp.com/www.lorosfantasticos.org/wp-content/uploads/2015/07/xantholora.jpg" alt="Loro yucateco">
+            <div class="card-content">
+              <h3>Loro yucateco</h3>
+              <p><strong>Amazona xantholora</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-yellow">
+            <h3>Amenazada</h3>
+            <p>Se considera que antes de la presencia humana, esta especie se encontraba ampliamente distribuida en todos los tipos de vegetación de la península de Yucatán pero, actualmente sus poblaciones son bajas o ausentes en las ciudades y sus alrededores. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://www.fundacionaquae.org/wp-content/uploads/2024/06/jaguar-pixabai-nickbar-1024x682.jpg" alt="Jaguar">
+            <div class="card-content">
+              <h3>Jaguar</h3>
+              <p><strong>Panthera onca</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>La deforestación y las actividades agrícolas han estado invadiendo el territorio del jaguar, reduciendo lentamente el área de distribución de estos felinos y separando a las poblaciones entre sí. Se estima que el jaguar ha perdido aproximadamente el 50% de su rango de distribución histórico. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/11480190/large.jpg" alt="Ocelote">
+            <div class="card-content">
+              <h3>Ocelote</h3>
+              <p><strong>Leopardus pardalis</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>La principal amenaza para la conservación del ocelote es la pérdida y fragmentación de su hábitat por actividades agrícolas y ganaderas y la cacería furtiva sobre la especie.  </p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://visitmichoacan.com.mx/wp-content/uploads/2024/03/Mariposa-Monarca-Experiencia-7.jpg" alt="Mariposa monarca">
+            <div class="card-content">
+              <h3>Mariposa monarca</h3>
+              <p><strong>Danaus plexippus</strong></p>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>Sujeta a protección especial</h3>
+            <p> La mariposa monarca conocida por su espectacular viaje anual de hasta 4.000 kilómetros por las Américas, esta amenazada por la destrucción de su hábitat y el cambio climático.  </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <h1 id="plantas">Plantas</h1>
+  <section class="gallery-section">
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/14506193/large.jpeg" alt="Biznaga Bola de Hilo">
+            <div class="card-content">
+              <h3>Biznaga Bola de Hilo</h3>
+              <p><strong>Mammillaria Herrerae</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En peligro de Extincion</h3>
+            <p> La reducción crítica de su hábitat debido a la agricultura, la extracción y comercio ilegal como planta de ornato, son las principales causas de que esta se encuentre en riesgo.</p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/112009205/original.jpeg" alt="Cocolmeca">
+            <div class="card-content">
+              <h3>Cocolmecal</h3>
+              <p><strong>Smilax regelii </strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-yellow">
+            <h3>Amenazada</h3>
+            <p>También conocida como caparazón de tortuga o discorea mexicana, es una de las especies endémicas en peligro de extinción. Originaria de zonas boscosas en los estados de Oaxaca y Veracruz, se ha visto amenazada por su extracción y venta ilegal. </p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/192252067/original.jpg" alt="Orquídea tigrillo de las nubes">
+            <div class="card-content">
+              <h3>Orquídea tigrillo de las nubes</h3>
+              <p><strong>Rossioglossum williamsianum</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>Está en peligro de extinción principalmente debido a la sobrecolecta para el comercio en el pasado y a la pérdida de su hábitat, los bosques húmedos de podocarpus en Chiapas, México </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/104187427/large.jpeg" alt="Maguey del rey Fernando">
+            <div class="card-content">
+              <h3>Maguey del rey Fernando</h3>
+              <p><strong>Agave nickelsiae</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro Critico</h3>
+            <p>Esta especie endémica de México, también conocida como maguey de Nizanda, enfrenta amenazas como la sobreexplotación para la producción de bebidas y alimentos, la pérdida de hábitat debido a la expansión agrícola y urbana, y la falta de programas de conservación.  </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/456139588/large.jpg" alt="mandrágora">
+            <div class="card-content">
+              <h3>Mandrágora</h3>
+              <p><strong>Turbinicarpus mandragora</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro Critico</h3>
+            <p>Se encuentra en peligro crítico por su colecta ilegal. Las poblaciones de esta especie son muy reducidas, pues en general son plantas solitarias que son polinizadas por diferentes insectos y hormigas. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Pelecyphora_aselliformis_20020511.jpg" alt="Peyote meco">
+            <div class="card-content">
+              <h3>Peyote meco</h3>
+              <p><strong>Pelecyphora aselliformis</strong></p>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>Sujeta a protección especial</h3>
+            <p>Realmente se encuentra clasificada en la lista roja como preocupación menor, aunque se mantiene bajo protección a la especie por su gran valor ornamental y su población en la naturaleza va disminuyendo. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://i.etsystatic.com/29769810/r/il/8bb1ce/3991493218/il_fullxfull.3991493218_98ov.jpg" alt="Barril de oro">
+            <div class="card-content">
+              <h3>Barril de oro</h3>
+              <p><strong>Echinocactus grusonii</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>Se encuentra catalogada en peligro de extinción en su hábitat natural, aunque esta es cultivada en a nivel mundial, después de haber sido extraída ilegalmente de su ámbito natural, para fines ornamentales. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://static.inaturalist.org/photos/19456567/medium.jpg" alt="Falso peyote">
+            <div class="card-content">
+              <h3>Falso peyote</h3>
+              <p><strong>Astrophytum asterias</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>Se encuentra en peligro de extinción por la recolecta que sufre de forma descontrolada para diversos fines. </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://worldofsucculents.com/wp-content/uploads/2020/07/Agave-nizandensis-Nizanda-Agave3.jpg" alt="Maguey de Nizanda">
+            <div class="card-content">
+              <h3>Maguey de Nizanda</h3>
+              <p><strong>Agave nizandensis</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-red">
+            <h3>En Peligro de Extinción</h3>
+            <p>Se encuentra en peligro de extinción ya que se enfrenta a los cambios de uso que sufre el suelo por parte de los ser humanos. Tiene una gran importancia ecológica en la fijación de carbono y además evita la erosión de los suelos.  </p>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/123049054/medium.jpeg" alt="Abeto de Hickel">
+            <div class="card-content">
+              <h3>Abeto de Hickel</h3>
+              <p><strong>Abies alba</strong></p>
+            </div>
+          </div>
+          <div class="card-back" id="card-yellow">
+            <h3>Amenazada</h3>
+            <p>Es una conífera endémica de México pudiéndose encontrar solo en Oaxaca, Veracurz, Chiapas y Puebla. La lista roja clasifica a este árbol conífero como especie vulnerable desde ya hace 20 años, por suerte actualmente se sigue conservando.  </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+           <h1 id="causas">Causas de peligro</h1>
+    <section>
+        <p class="principal">Existe una diversidad importante dentro del estado de Puebla, sin embargo esta biodiversidad se ve amenazada por la actividad humana, la deforestación de bosques y selvas, las actividades ganaderas o la caza ilegal de especies que actualmente estan protegidas para evitar su extinción. </p>
+      <div class="container">
+        <img src="https://ciudadesytransporte.mx/wp-content/uploads/2021/11/imagen_herramientas_y_soluciones_para_la_proteccion_del_medio_ambiente_el_cambio_climatico_y_la_movilidad_sustentable_en_las_ciudades-1024x682.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Perdidas de habitat</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="https://fotografias-compromiso.atresmedia.com/clipping/cmsimages02/2015/12/28/7202D750-1BA9-44FD-9BD3-F769DB968616/58.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Contaminación</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="https://preveniramazonia.pe/wp-content/uploads/9-1.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Caza ilegal y tráfico de animales</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="https://efeverde.com/wp-content/uploads/2022/04/Confederacion-H-Guadiana.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Extracción ilegal de recursos</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="https://descubrelaenergia.fundaciondescubre.es/files/2021/10/cambio-climatico.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Cambio Climático</h3>
+          <p></p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="https://aquinoticias.mx/wp-content/uploads/2022/04/especies-invasoras.jpg" alt="Norway" style="width:100%;" class="img-normalizada">
+        <div class="text-block">
+          <p></p>
+          <h3>Especies invasoras</h3>
+          <p></p>
+        </div>
+      </div>
+      
+    </section>
+           <h1 id="medidas">Medidas de prevención</h1>
+    <section>
+        <div class="carousel">
+                  <div class="carousel-track">
+                    <img src="https://www.caritas.org.mx/wp-content/uploads/2022/06/que-acciones-ayudan-a-preservar-ecosistemas.jpg" alt="Imagen 1">
+                    <img src="https://img.remediosdigitales.com/633105/granja2/1366_2000.jpg" alt="Imagen 2">
+                    <img src="https://noticias22.com/wp-content/uploads/2024/06/Titulacion-Medio-Ambiente-1140x694-1.jpg" alt="Imagen 3">
+                    <img src="https://blog.agrocampo.com.co/wp-content/uploads/2022/11/formas-de-evitar-el-consumismo.jpg" alt="Imagen 4">
+                    <img src="https://fotografias-compromiso.atresmedia.com/clipping/cmsimages02/2015/12/28/7202D750-1BA9-44FD-9BD3-F769DB968616/58.jpg" alt="Imagen 5"> 
+                  </div>
+                </div>
+      <p class="principal"><b>Protección de los hábitats:</b> Evitar la deforestación y la destrucción de ecosistemas naturales. Crear y mantener áreas protegidas como parques nacionales, reservas naturales, etc.</p>
+      <p class="principal"><b>Reducción de la caza y el tráfico ilegal:</b> Prohibir la caza y la pesca de animales en peligro de extinción. Denunciar el tráfico ilegal de animales y productos derivados de ellos. Aumentar la vigilancia y la aplicación de leyes para proteger a las especies.</p>
+      <p class="principal"><b>Programas de reproducción en cautiverio</b> y reintroducción a su hábitat natural. Evaluación y gestión de especies en peligro de extinción. Investigación y estudio de las causas de la pérdida de biodiversidad.</p>
+      <p class="principal"><b>Concienciación y educación:</b> Promover la educación ambiental en escuelas y comunidades. Organizar campañas de concienciación sobre la importancia de la protección de la fauna silvestre. Fomentar el respeto a la naturaleza y a sus habitantes.</p>
+      <p class="principal"><b>Consumo responsable:</b> No comprar productos derivados de animales en peligro de extinción (pieles, plumas, etc.). Optar por productos sostenibles y que no dañen el medio ambiente.</p>
+    </section>
+        </main>
+        <footer>
+           <h5>© 2025 Flora y Fauna de Puebla</h5> 
+           <h5>Todos los derechos reservados.</h5>
+            <h6>Explora, aprende y protege la biodiversidad de nuestro estado. | Sitio creado con fines educativos.</h6>
+
+        </footer>
+    </body>
+</html>
+

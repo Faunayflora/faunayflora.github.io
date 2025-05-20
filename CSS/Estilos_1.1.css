@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora la biodiversidad</title>
+  <link rel="stylesheet" href="estilos.1.1.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Explora Puebla</h1>
+  </header>
+
+  <main class="contenedor">
+    <div class="botones">
+      <button id="btnExplora">EXPLORA</button>
+
+      <div id="nivel1" class="oculto">
+        <button id="btnBiodiversidad">Biodiversidad</button>
+        <button id="btnJuega">Juega y aprende</button>
+      </div>
+
+      <div id="nivel2" class="oculto">
+        <button>Flora</button>
+        <button>Fauna</button>
+        <button>Ecosistemas</button>
+        <button>Especies en peligro</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Explora Puebla</p>
+  </footer>
+
+  <script>
+    document.getElementById('btnExplora').addEventListener('click', () => {
+      document.getElementById('btnExplora').style.display = 'none';
+      document.getElementById('nivel1').style.display = 'flex';
+    });
+
+    document.getElementById('btnBiodiversidad').addEventListener('click', () => {
+      document.getElementById('nivel2').style.display = 'flex';
+    });
+  </script>
+
+</body>
+</html>
